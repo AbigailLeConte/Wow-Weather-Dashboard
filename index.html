@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wow Weather Dashboard</title>
+  <link href="https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <div class="flex-row align-center justify-center min-100-vh bg-primary">
+    <div class="col-12 col-md-9 flex-column align-center bg-light p-5">
+      <h1 class="text-primary">Wow Weather Dashboard</h1>
+      <form id="search-form" class="form w-100">
+        <input id="search-input" class="form-input w-100" type="text" placeholder="Search!">
+        <select id="format-input" class="form-input w-100">
+          <option value="" disabled selected>Search for a City</option>
+          <option value="Atlanta">Atlanta</option>
+          <option value="Austin">Austin</option>
+          <option value="Chicago">Chicago</option>
+          <option value="New-York">New York</option>
+          <option value="Orlando">Orlando</option>
+          <option value="San-Francisco">San Francisco</option>
+          <option value="Seattle">Seattle</option>
+          <option value="Denver">Denver</option>
+        </select>
+        <button class="btn btn-info btn-block">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-9 p-3 text-light">
+    <h2>Showing results for <span id="result-text"></span></h2>
+    <div id="result-content"></div>
+  </div>
+</div>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
